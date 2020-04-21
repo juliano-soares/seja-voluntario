@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja Voluntário</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="header row">
+      <a href="/">
+        <img src="/assets/images/logo.png" alt="Logo do Seja Voluntário">
+        <h1 class="text-red text-shadow">Seja Voluntário</h1>
+      </a>
+    </header>
+
+    <section class="notices row">
+      <h2 class="text-red">{{vaga.titulo}}</h2>
+      <p class="city"><strong>{{vaga.cidade}}</strong></p>
+      <p>{{vaga.descricao}}</p>
+      <p><a class="btn btn-red" href="mailto:{{vaga.email}}">Enviar email</a></p>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Seja Voluntário</strong> - Feito com amor em Santa Maria-RS.
+      </p>
+    </footer>
+  </main>
+</body>
+
+</html>

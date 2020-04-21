@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja Voluntário</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="header row">
+      <a href="/">
+        <img src="/assets/images/logo.png" alt="Logo do Seja Voluntário">
+        <h1 class="text-red text-shadow">Seja Voluntário</h1>
+      </a>
+    </header>
+
+    <section class="notices row">
+      <div class="form form-search">
+        <h2 class="text-blue">Busque uma vaga de voluntariado</h2>
+        <form class="flex" onsubmit="return validatesearch(this)">
+          <input type="text" name="key" class="col-half" value="{{key}}" placeholder="Entre com o que desaja buscar.">
+          <button type="submit" class="btn btn-blue">Buscar</button>
+        </form>
+      </div>
+      <div class="grid grid-col-3">
+        {{#each vagas}}
+        <article class="notice">
+          <h4>{{this.titulo}}</h4>
+          <p class="city"><strong>{{this.cidade}}</strong></p>
+          <p>{{this.descricao}}</p>
+          <p><a class="btn btn-red" href="/anuncio/{{this.id}}">Saiba mais</a></p>
+        </article>
+        {{/each}}
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Seja Voluntário</strong> - Feito com amor em Santa Maria-RS.
+      </p>
+    </footer>
+  </main>
+  <script src="/assets/js/forms.js"></script>
+</body>
+
+</html>

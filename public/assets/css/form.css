@@ -1,0 +1,49 @@
+input, textarea {
+  display: block;
+  border: 1ps solid #ddd;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+input.col-full, textarea {
+  width: 100%;
+}
+
+input.col-half {
+  width: 49%;
+}
+
+button.btn {
+  margin: 5px 0;
+}
+
+.form-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-search form {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.form-search form.flex{
+  justify-content: start;
+}
+
+.form-search form input {
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  input.col-half {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .form-search input.col.half {
+    width: auto;
+    min-width: 250px;
+  }
+}

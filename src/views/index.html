@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja Voluntário</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="header row">
+      <a href="/">
+        <img src="/assets/images/logo.png" alt="Logo do Seja Voluntário">
+        <h1 class="text-red text-shadow">Seja Voluntário</h1>
+      </a>
+    </header>
+
+    <section class="cta flex row">
+      <article>
+        <h2 class="text-blue">Busque vagas de voluntariado</h2>
+        <p>
+          Busque uma vaga perto de você e tome atitude transformadora ajudando o próximo.
+        </p>
+        <p>
+          <a class="btn btn-blue" href="/busca">Quero ser voluntário</a>
+        </p>
+      </article>
+      <article>
+        <h2 class="text-green">Anuncie vagas de voluntariado</h2>
+        <p>
+          Você que é de uma ONG ou instituição filantropica, cadastre suas vagas para encontrar coluntários ai perto de você.
+        </p>
+        <p>
+          <a class="btn btn-green" href="/cadastro">Quero anunciar</a>
+        </p>
+      </article>
+    </section>
+    
+    <section class="notices row">
+      <h3 class="text-red">Últimos anúncios de vagas</h3>
+      <div class="grid grid-col-3">
+        {{#each vagas}}
+        <article class="notice">
+          <h4>{{this.titulo}}</h4>
+          <p class="city"><strong>{{this.cidade}}</strong></p>
+          <p>{{this.descricao}}</p>
+          <p><a class="btn btn-red" href="/anuncio/{{this.id}}">Saiba mais</a></p>
+        </article>
+        {{/each}}
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Seja Voluntário</strong> - Feito com amor em Santa Maria-RS.
+      </p>
+    </footer>
+  </main>
+</body>
+
+</html>
